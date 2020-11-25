@@ -1,0 +1,9 @@
+.home{
+    min-height: 100vh;
+    background:red;
+}
+.home h1{
+    color:white;
+    padding:3em;
+    text-align: center;
+}

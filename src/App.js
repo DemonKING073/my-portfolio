@@ -1,11 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import DefaultPage from './components/DefaultPage';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import Projects from './components/Projects';
-import About from './components/About';
-
+import Nav from './Nav/Nav';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // const Hpage= DefaultPage(Home);
 
@@ -22,13 +18,9 @@ function App() {
     )
   }else return (
     <>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={DefaultPage(Home)}/>
-          <Route path="/projects" exact component={DefaultPage(Projects)}/>
-          <Route path="/about" exact component={DefaultPage(About)}/>
-        </Switch>
-      </Router>
+    <Router>
+      <Nav />
+    </Router>
     </>
   );
 }
