@@ -1,23 +1,29 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import './NavCss.css'
+import './NavCss.css';
+import { BrowserRouter as Router, Switch, Route, Link  } from 'react-router-dom';
+import  Home from '../components/Home/Home';
+import Projects from '../components/Projects/Projects';
+import About from '../components/About/About';
 
 const Nav = () =>{
     return(
         <>
             <header>
                 <nav>
-                    <h1>myLogo</h1>
-                    <div className="menu-icon-div">
-                        <input type="checkbox" className="menu-btn" id="menu-btn"/>
-                        <label htmlFor="menu-btn" className="menu-icon"><div className="menu-icon">mobile menu</div></label>
-                    </div>
+                    <h1 className="logo" ><Link to="/">Portfolio</Link></h1>
+                    <input type="checkbox" className="menu-btn" id="menu-btn"/>
+                    <label htmlFor="menu-btn" className="menu-icon"><span className="icon-div"></span></label>
                     <ul className="nav-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/projects">Projects</Link></li>
+                        <li><Link to="/about">About</Link></li>
                     </ul>
                 </nav>
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/projects" component={Projects} />
+                    <Route path="/about" component={About} />
+                </Switch>
             </header>
         </>
     );

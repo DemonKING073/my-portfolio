@@ -5,10 +5,11 @@ import './home.css';
 const Home = () =>{
     return(
         <>
-            <div className="white-space"></div>
-            <section className="home">
-                <h1>This is my Home Page</h1>
-            </section>
+            <div className="home">
+                <h1 className="parent">Welcome <span className="date">April 13, 2020</span></h1>
+                <h1> To <span>Din Bibek Thapa's</span></h1>
+                <h1>Portfolio site <span  className="bottom-text">Projects, Featured</span></h1>
+            </div>
         </>
     );
 }
