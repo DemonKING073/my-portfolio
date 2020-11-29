@@ -1,7 +1,6 @@
 .home{
-    height:100%;
     width:100%;
-    margin-top: 60px;
+    padding-top: 60px;
 }
 .home h1{
     color:#D0D0D0;
@@ -10,7 +9,7 @@
     font-weight: lighter;
     text-align: center;
     font-weight: lighter;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 .home span{
     color:crimson;
@@ -22,16 +21,18 @@
     position:absolute;
     bottom: 15px;
     font-size: 18px;
-    margin-left:10px;
+    padding-left:10px;
     color:#B9B9B9; 
     transform: translateX(500px);
     animation: LeftSlideIn 1s forwards;
 }
-
-.home h1 .bottom-text{
+.bottom-parent{
+    position: relative;
+}
+.home .bottom-parent .bottom-text{
     position: absolute;
     font-size: 18px;
-    bottom: 6em;
+    bottom: -1em;
     color:#B9B9B9;
     left:45%;
     transform: translateY(500px);

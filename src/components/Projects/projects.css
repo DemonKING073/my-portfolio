@@ -1,0 +1,134 @@
+.projects{
+    width:100%;
+    min-height: 100vh;
+    overflow-y: visible;
+}
+.p-title{
+    color:#B9B9B9;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2.5em;
+    font-family: Sansita Swashed;
+}
+
+
+@keyframes Shake{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(2deg);
+    }
+    75%{
+        transform: rotate(-2deg);
+    }
+}
+
+/* CARD CSS */
+.card-container{
+    width:74%;
+    height:65vh;
+    margin: 0 auto;
+    margin-top: 25px;
+    overflow-y: visible;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+.card{
+    display: inline-block;
+    width:370px;
+    height:205px;
+    background-color: #717171;
+    margin:5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card:hover{
+    animation: Shake 0.5s;
+    animation-iteration-count: 1;
+}
+.card img{
+    width:100%;
+    height:100%;
+}
+.preview-div{
+    display:flex;
+    width:80%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.preview-div span a{
+    text-decoration: none;
+    color:white;
+}
+.preview-div span a:hover{
+    color:crimson;
+}
+.image-card{
+    height:170px;
+    padding:5px;
+    cursor: pointer;
+    position: relative;
+}
+.image-card::before,.image-card::after{
+    content:'';
+    display: block;
+    height:93%;
+    width:96%;
+    position: absolute;
+    top:5px;
+    bottom:5px;
+    left: 5px;
+    right:5px;
+}
+.image-card::before{
+    border-top: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    transform: scale(0,1);
+    transition: transform ease-out 250ms;
+
+}
+.image-card::after{
+    border-left: 2px solid #FFF;
+    border-right:2px solid #FFF;
+    transform: scale(1,0);
+    transition: transform ease-out 250ms;
+}
+.image-card:hover::before{
+  transform: scale(1.01,1);
+}
+.image-card:hover::after{
+  transform: scale(1,1.03);
+
+}
+.image-card:hover .card-text{
+    opacity: 1;
+    transition: opacity .5s;
+}
+.image-color{
+    height:100%;
+    width:100%;
+}
+.image-card:hover .image-color{
+    height:100%;
+    width: 100%;
+    background:#000;
+    opacity: .4;
+}
+
+.card-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    color:#151515  ;
+    font-size: 1.5em;
+}

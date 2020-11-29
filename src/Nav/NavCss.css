@@ -9,8 +9,8 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     width:100%;
-    min-height: 100vh;
-
+    background-attachment: fixed;
+    height:100vh;
 }
 .logo{
     font-family: Logo;
@@ -18,6 +18,9 @@ header{
     font-size: 2.5em;
     letter-spacing: 2px;
     text-shadow: 6px 6px 0px rgba(248, 248, 248, 0.1);
+}
+.logo a{
+    transition: all .5s ease-out;
 }
 .logo a{
     text-decoration: none;
@@ -182,6 +185,32 @@ nav{
     .nav-menu li a::after{
         background: none;;
     }
- 
- 
+}
+
+/* CSS TRANSITION */
+.page-transition{
+    position: absolute;
+    top:100px;
+    left:0;
+    right:0;
+}
+
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
 }
