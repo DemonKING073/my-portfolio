@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './projects.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import Card from './Card';
 import image1 from './lamo/lamo.png';
 import image2 from './lamo/lamo2.png';
@@ -35,17 +38,43 @@ const imgs = [
 
 
 const Projects = () =>{
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
+    useEffect(()=>{
+        const lamo = () =>{
+            setWidth(window.innerWidth);
+        }
+    window.addEventListener('resize',lamo,{passive:false})
+    });
+    
+    const [width, setWidth] = useState(window.innerWidth);
     return(
         <>
             <div  className="projects page-transition" >
                 <h1 className="p-title">Some of My Projects</h1>
-                <div className="card-container">
-                   {
-                       imgs.map((item,index)=>(
-                           <Card key={index} name ={item.name} img={item.img} gitLink={item.gitLink} prevLink={item.prevLink}/>
-                       ))
-                   }
-                </div>
+                {
+                    width>1050?<div className="card-container">
+                    {
+                        imgs.map((item,index)=>(
+                            <Card key={index} name ={item.name} img={item.img} gitLink={item.gitLink} prevLink={item.prevLink}/>
+                        ))
+                    }
+                 </div>:
+                    <Slider {...settings}>
+                    {
+                        imgs.map((item,index)=>(
+                            <Card key={index} name ={item.name} img={item.img} gitLink={item.gitLink} prevLink={item.prevLink}/>
+                        ))
+                    }
+                    </Slider>
+                }
+                
+                
             </div>
         </>
     );

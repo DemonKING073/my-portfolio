@@ -3,8 +3,17 @@
     height:60vh;
     margin-top: 1em;
     width:80%;
-    display:grid;
-    grid-template-columns: auto 1fr 1fr;
+    /* display:grid; */
+    /* grid-template-columns: auto auto auto; */
+    display:flex;
+
+}
+.about-title{
+    color:#B9B9B9;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2.5em;
+    font-family: Sansita Swashed;
 }
 .one{
     background:gray;
@@ -35,10 +44,10 @@
     display:flex;
     align-items: center;
     height:60vh;
-    
+    width:30vw;
 }
 .b-container{
-    width:70%;
+    width:65%;
     margin: 0 auto;
     font-size: 22px;
     letter-spacing: 2px;
@@ -58,10 +67,101 @@
 .education{
     margin-left: 2em;
 }
-.space{
-    margin-top:4em;
-}
+ 
 .three{
+    display:flex;
+    align-items: center;
     height:60vh;
-
+    width:30vw;
     }
+
+@media screen and (max-width:1130px){
+    
+    .b-container{
+        font-size: 18px;
+    }
+    .my-photo{
+        height: 200px;
+        width:150px;
+    }
+    .name-div h2{
+        font-size: 15px;
+    }
+    .one{
+        height: 230px;
+        margin-top: 4.7em;
+    }
+    .two{
+        width:80%;
+    }
+    .three{
+        width:80%;
+    }
+
+}
+@media screen and (max-width:940px){
+    .b-container{
+        font-size: 16px;
+    }
+                        
+}
+@media screen and (max-width:870px){
+    .b-container{
+        width:80%;
+    }
+}
+@media screen and (max-width:740px){
+    .b-container{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:700px){
+    .about-title{
+        font-size: 2em;
+    }
+    .a-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .one{
+        height: auto;
+        width:150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .name-div{
+        display: none;
+    }
+    .my-photo{
+        height:150px;
+        width:150px;
+    }
+}
+@media screen and (max-width:500px){
+    .p-title{
+        font-size: 1.4em;
+    }
+    .b-container{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:400px){
+    .p-title{
+        font-size: 1em;
+    }
+    .b-container{
+        font-size: 15px;
+    }
+    .two{
+        width: 100%;
+    }
+    .three{
+        width:100%
+    }
+}
+@media screen and (max-width:380px){
+    .b-container{
+        font-size: 12px;
+    }
+}

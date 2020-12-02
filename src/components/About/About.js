@@ -5,10 +5,11 @@ import SchoolIcon from '@material-ui/icons/School';
 import LanguageIcon from '@material-ui/icons/Language';
 
 const About = () =>{
+    
     return(
         <>
             <div className=".about">
-                <h1 className="p-title">About Myself</h1>
+                <h1 className="about-title">About Myself</h1>
                 <div className="a-container">
                     <div className="one">
                         <img className="my-photo" src={myself} alt="Mero HO" />
@@ -18,7 +19,7 @@ const About = () =>{
                     </div>
                     <div className="two">
                         <div className="b-container">
-                            <span>Hi</span>,  My Name is <span className="mero-nam">Din Bibek Thapa</span>, and I’m  
+                            <span>Hi</span>,  My Name is<span className="mero-nam">Din Bibek Thapa</span>, and I’m  
                             front-end web developer from Jhapa, Nepal. I have passion 
                             for building user-friendly , interactive , responsive Websites 
                             which focus on user experience.
@@ -27,7 +28,7 @@ const About = () =>{
                     </div>
                     <div className="three">
                         <div className="b-container">
-                        <h4 class="space"> <SchoolIcon/> EDUCATION:</h4>
+                        <h4 className="space"> <SchoolIcon/> EDUCATION:</h4>
                             <ul className="education">
                                 <li>Diploma in Cs:<br /> Dr.  SMCE, 2019 
                                     Banglore, India

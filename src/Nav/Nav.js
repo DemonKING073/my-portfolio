@@ -10,7 +10,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 const Nav = () =>{
     return(
         <>
-            <div>
             <header>
                 <nav className="background-image">
                     <h1 className="logo" ><Link to="/">Portfolio</Link></h1>
@@ -40,7 +39,6 @@ const Nav = () =>{
                 )}
                 />              
             </header>
-            </div>
         </>
     );
 }
