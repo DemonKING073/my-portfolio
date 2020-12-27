@@ -11,16 +11,10 @@ import image4 from './lamo/lamo4.png';
 
 const imgs = [
     {
-        img:image2,
-        gitLink:'https://github.com/DemonKING073/tribute-page',
-        prevLink:'https://gifted-ptolemy-c45728.netlify.app/',
-        name:'Tribute'
-    },
-    {
-        img:image3,
-        gitLink:'https://github.com/DemonKING073/todo-app',
-        prevLink:'https://friendly-perlman-2173ad.netlify.app/',
-        name:'Todo App'
+        img:image1,
+        gitLink:'https://github.com/DemonKING073/resturant',
+        prevLink:'https://sharp-mclean-b16d1d.netlify.app/',
+        name:'Resturant App'
     },
     {
         img:image4,
@@ -29,11 +23,20 @@ const imgs = [
         name:'Weather App'
     },
     {
-        img:image1,
-        gitLink:'https://github.com/DemonKING073/resturant',
-        prevLink:'https://sharp-mclean-b16d1d.netlify.app/',
-        name:'Resturant App'
+        img:image3,
+        gitLink:'https://github.com/DemonKING073/todo-app',
+        prevLink:'https://friendly-perlman-2173ad.netlify.app/',
+        name:'Todo App'
+    },
+    {
+        img:image2,
+        gitLink:'https://github.com/DemonKING073/tribute-page',
+        prevLink:'https://gifted-ptolemy-c45728.netlify.app/',
+        name:'Tribute'
     }
+    
+    
+    
 ];
 
 

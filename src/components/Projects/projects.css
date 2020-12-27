@@ -169,7 +169,7 @@
         animation: none;
     }
     .card-text{
-        font-size: 50px;
+        font-size: 35px;
     }
 }
 @media screen and (max-width:500px){
